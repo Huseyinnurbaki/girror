@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+########################
+# Author: Huseyin Nurbaki
+###########################
+
+
+git clone --bare $1 && cd "$(basename "$1")"
+git remote add $2 $3
+git push --force --all $2
+git push --force --tags $2
+cd ..
